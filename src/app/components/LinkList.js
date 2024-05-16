@@ -31,7 +31,7 @@ export default function LinkList({config}){
       </div>
     </div>
     <div className="rodape">
-      <img src="agulha-rodape.svg" />
+      <img className="img-rodape" src="agulha-rodape.svg" />
     </div>
   </div>
   )
