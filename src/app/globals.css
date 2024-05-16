@@ -1,33 +1,220 @@
-@tailwind base;
+/* @tailwind base; */
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@font-face {
+  font-family: "The_Seasons";
+  src: url('/TheSeasons-Reg.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "The_Seasons";
+  src: url('/TheSeasons-Bd.ttf');
+  font-style: normal;
+  font-weight: bold;
+}
+
+body{
+  font-family: "The_Seasons";
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.03em;
+}
+
+.app {
+  /* background-color: #293b49; */
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 250px;
+  overflow: hidden;
+  background-image: url("/pattern.webp");
+  background-size: 160px;
+}
+
+.cabeca {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: hidden;
+
+}
+.corpo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 500px;
+  margin-bottom: 12vh;
+}
+
+.perfil {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #daccbc;
+  max-height: 40vh;
+}
+
+.perfil > img {
+  width: 22vh;
+  border-radius: 1000px;
+  /* border: 2px solid #daccbc88 */
+}
+
+.perfil > .titulo {
+  margin-top: 3px;
+  font-size: 3.1vh;
+}
+.perfil > .sub-titulo {
+  margin: 5px;
+  font-size: 2.2vh;
+}
+.links-section{
+  width: 100%;
+  height: 45vh;
+  padding-bottom: 12vh;
+}
+
+.link-list{
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  /* max-width: 500px; */
+  list-style: none;
+  padding-left: 0;
+  gap: 10px;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  color: #1f2f3b;
+}
+.link-list .li{
+  width: 80%;
+  margin: 0px 40px;
+  background: #a37b5b;
+  padding: 1vh 20px;
+  border-radius: 40px;
+  font-size: 5vw;
+  cursor: pointer;
+}
+.link-list .li:hover{
+  transform: translateY(-2px);
+}
+.link-list .li:active{
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+.bloco {
+  height: 1.5vh;
+  width: 100%;
+}
+.bloco01{
+  background-color: #794722;
+}
+.bloco02{
+  background-color: #a86f44;
+}
+.bloco03{
+  background-color: #b29786;
+}
+.bloco04{
+  background-color: #586d80;
+}
+.bloco05{
+  background-color: #445565;
+}
+
+.rodape{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  max-height: 90px;
+  height: 12vh;
+  margin-bottom: 1vh;
+  margin-right: 2vw;
+  position: fixed;
+  bottom: 0;
+}
+
+.img-rodape {
+  height: 100%;
+  padding: 1vh;
+}
+
+
+/* Auxiliars */
+
+.flex-col-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shadow {
+  box-shadow: 1px 1px 4px #0006;
+}
+.t-shadow {
+  text-shadow: 1px 1px 3px #0008;
+}
+
+
+/* non little screens */
+@media only screen and (min-width: 340px) {
+  .link-list > .li {
+     font-size: 13pt;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .perfil > img {
+    width: 25vh;
   }
+  .perfil > .titulo {
+    margin-top: 3px;
+    font-size: 16pt;
+  }
+  .perfil > .sub-titulo {
+    margin: 5px;
+    font-size: 12pt;
+  }
+
+}
+
+@media (max-height: 340px) {
+  .link-list .li {
+     font-size: 3vh;
+  }
+  .perfil > img {
+    width: 18vh;
+  }
+  .perfil > .titulo {
+    margin-top: 2px;
+    font-size: 3vh;
+  }
+  .perfil > .sub-titulo {
+    margin: 3px;
+    font-size: 1.8vh;
+  }
+  .link-list .li{
+    padding: 1vh 20px;
+  }
+
 }
