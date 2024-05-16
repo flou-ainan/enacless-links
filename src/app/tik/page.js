@@ -3,7 +3,7 @@ import LinkList from "@/app/components/LinkList";
 export default function Home() {
   const config = {
     url_foto_perfil: "https://i.ibb.co/HFYK4t6/perfil.png",
-    titulo: "Enacless",
+    titulo: "Mariana enacles",
     subtitulo: "Bolsas Clássicas em Crochê",
     links:[
       {
