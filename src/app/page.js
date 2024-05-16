@@ -4,7 +4,7 @@ export default function Home() {
   const config = {
     url_foto_perfil: "https://i.ibb.co/HFYK4t6/perfil.png",
     titulo: "Enacless",
-    subtitulo: "Bolsas Clássicas em Crochê",
+    subtitulo: "Bolsas Exclusivas",
     links:[
       {
         texto: "Grupo Exclusivo - Novidades",
